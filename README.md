@@ -2,6 +2,7 @@
 
 A new Flutter project.
 New start in a new project
+Coach App By Flutter.
 
 ## Getting Started
 
