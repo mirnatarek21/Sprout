@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+
 import 'core/utils/app_router.dart';
 
 void main() {
-  runApp(WellFit());
+  runApp(const WellFit());
 }
 
 class WellFit extends StatelessWidget {

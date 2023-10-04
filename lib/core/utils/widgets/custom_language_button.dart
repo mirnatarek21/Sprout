@@ -1,6 +1,6 @@
-import 'package:well_fit/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:well_fit/core/utils/styles.dart';
 
 class CustomLanguageButton extends StatelessWidget {
   final String buttonText;
@@ -9,6 +9,7 @@ class CustomLanguageButton extends StatelessWidget {
   final String svgImagePath;
 
   const CustomLanguageButton({
+    super.key,
     required this.buttonText,
     required this.backgroundColor,
     required this.textColor,
@@ -18,19 +19,20 @@ class CustomLanguageButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 20),
+      margin: const EdgeInsets.symmetric(horizontal: 20),
       child: FractionallySizedBox(
         widthFactor: 0.9,
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 10),
+          padding: const EdgeInsets.symmetric(horizontal: 10),
           child: ElevatedButton(
             onPressed: () {
               // Handle button press
             },
             style: ButtonStyle(
-              backgroundColor: MaterialStateProperty.all<Color>(backgroundColor),
+              backgroundColor:
+                  MaterialStateProperty.all<Color>(backgroundColor),
               foregroundColor: MaterialStateProperty.all<Color>(textColor),
-              minimumSize: MaterialStateProperty.all<Size>(Size(100, 70)),
+              minimumSize: MaterialStateProperty.all<Size>(const Size(100, 70)),
               shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                 RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(18),
@@ -43,10 +45,10 @@ class CustomLanguageButton extends StatelessWidget {
                   width: 45,
                   child: SvgPicture.asset(svgImagePath),
                 ),
-                SizedBox(width: 90),
+                const SizedBox(width: 90),
                 Text(
                   buttonText,
-                  style: Styles.QuickSand20,
+                  style: Styles.quickSand20,
                 ),
               ],
             ),

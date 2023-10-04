@@ -1,5 +1,5 @@
-import 'package:well_fit/core/utils/styles.dart';
 import 'package:flutter/material.dart';
+import 'package:well_fit/core/utils/styles.dart';
 
 class CustomButton extends StatelessWidget {
   final String buttonText;
@@ -9,6 +9,7 @@ class CustomButton extends StatelessWidget {
   final VoidCallback? onPressed;
 
   const CustomButton({
+    super.key,
     required this.buttonText,
     required this.backgroundColor,
     required this.textColor,
@@ -19,17 +20,18 @@ class CustomButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 20),
+      margin: const EdgeInsets.symmetric(horizontal: 20),
       child: FractionallySizedBox(
         widthFactor: 0.8,
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 10),
+          padding: const EdgeInsets.symmetric(horizontal: 10),
           child: ElevatedButton(
             onPressed: onPressed,
             style: ButtonStyle(
-              backgroundColor: MaterialStateProperty.all<Color>(backgroundColor),
+              backgroundColor:
+                  MaterialStateProperty.all<Color>(backgroundColor),
               foregroundColor: MaterialStateProperty.all<Color>(textColor),
-              minimumSize: MaterialStateProperty.all<Size>(Size(100, 70)),
+              minimumSize: MaterialStateProperty.all<Size>(const Size(100, 70)),
               shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                 RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(18),
@@ -41,7 +43,7 @@ class CustomButton extends StatelessWidget {
               children: [
                 Text(
                   buttonText,
-                  style: textStyle ?? Styles.rubic16,
+                  style: textStyle ?? Styles.rubik16,
                 ),
               ],
             ),
