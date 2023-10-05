@@ -75,7 +75,7 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
                     curve: Curves.easeInOut,
                   );
                 } else {
-                  GoRouter.of(context).push(AppRouter.screen1);
+                  GoRouter.of(context).push(AppRouter.welcomeScreen);
                 }
               },
               child: SvgPicture.asset(
@@ -95,7 +95,7 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
                 borderRadius: BorderRadius.circular(20),
               ),
               child: GestureDetector(
-                onTap: () => GoRouter.of(context).push(AppRouter.screen1),
+                onTap: () => GoRouter.of(context).push(AppRouter.welcomeScreen),
                 child: Padding(
                   padding: EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                   child: Text(
