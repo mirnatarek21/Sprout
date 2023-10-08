@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../../constants.dart';
+import '../../../../core/utils/app_router.dart';
 import '../../../../core/utils/assets.dart';
 import '../../../../core/utils/styles.dart';
 import '../../../../core/utils/widgets/custom_button.dart';
@@ -43,7 +45,9 @@ class WelcomeScreen extends StatelessWidget {
                   const SizedBox(height: 20),
                   CustomButton(
                     buttonText: 'Get Started',
-                    onPressed: (){},
+                    onPressed: (){
+                      GoRouter.of(context).push(AppRouter.nameScreen);
+                    },
                     backgroundColor: buttonColor,
                     textColor: Colors.white,
                     textStyle: Styles.rubik16.copyWith(fontWeight: FontWeight.w600),

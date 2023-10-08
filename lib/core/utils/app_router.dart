@@ -3,11 +3,15 @@ import 'package:well_fit/features/onBoarding/presentation/views/welcome_screen.d
 
 import '../../Features/onBoarding/presentation/views/language_screen_view.dart';
 import '../../Features/onBoarding/presentation/views/onboarding_view.dart';
+import '../../features/sign_in/views/gender_screen.dart';
+import '../../features/sign_in/views/name_screen_view.dart';
 
 abstract class AppRouter {
   static const languageScreen = '/languageScreen';
   static const onBoardingView = '/onBoardingView';
   static const welcomeScreen = '/welcomeScreen';
+  static const nameScreen = '/nameScreen';
+  static const genderScreen = '/genderScreen';
 
   static final router = GoRouter(
     routes: [
@@ -22,6 +26,14 @@ abstract class AppRouter {
       GoRoute(
         path: welcomeScreen,
         builder: (context, state) => const WelcomeScreen(),
+      ),
+      GoRoute(
+        path: nameScreen,
+        builder: (context, state) => const NameScreen(),
+      ),
+      GoRoute(
+        path: genderScreen,
+        builder: (context, state) => const GenderScreen(),
       ),
     ],
   );

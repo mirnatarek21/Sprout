@@ -12,4 +12,9 @@ class AssetsData {
   static const next2 = 'assets/images/Button - Next2.svg';
   static const next3 = 'assets/images/Button - Next3.svg';
   static const moon = 'assets/images/moon.svg';
+  static const arrow = 'assets/images/down.svg';
+  static const rectangle = 'assets/images/Rectangle.svg';
+  static const male = 'assets/images/Male.png';
+  static const female = 'assets/images/Female.png';
+
 }
