@@ -114,7 +114,6 @@ class EmailScreen extends StatelessWidget {
                   CustomButton(
                     buttonText: 'Verify',
                     onPressed: () {
-                      GoRouter.of(context).push(AppRouter.genderScreen);
                     },
                     backgroundColor: buttonColor,
                     textColor: Colors.white,
