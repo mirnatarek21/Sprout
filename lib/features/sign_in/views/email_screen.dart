@@ -1,9 +1,7 @@
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
-import 'package:well_fit/features/sign_in/views/widgets/gender_widget.dart';
 
 import '../../../constants.dart';
 import '../../../core/utils/app_router.dart';
@@ -11,15 +9,8 @@ import '../../../core/utils/assets.dart';
 import '../../../core/utils/styles.dart';
 import '../../../core/utils/widgets/custom_button.dart';
 
-class GenderScreen extends StatefulWidget {
-  const GenderScreen({Key? key}) : super(key: key);
-
-  @override
-  _GenderScreenState createState() => _GenderScreenState();
-}
-
-class _GenderScreenState extends State<GenderScreen> {
-  int selectedGender = 0;
+class EmailScreen extends StatelessWidget {
+  const EmailScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -28,13 +19,12 @@ class _GenderScreenState extends State<GenderScreen> {
         child: Stack(
           children: [
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 12,),
+              padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 12), // Add padding here
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   InkWell(
-                    onTap: () {
-                    },
+                    onTap: () {},
                     child: SvgPicture.asset(
                       AssetsData.arrow,
                       width: 30,
@@ -49,7 +39,7 @@ class _GenderScreenState extends State<GenderScreen> {
                   ),
                   InkWell(
                     onTap: () {
-                      GoRouter.of(context).push(AppRouter.nameScreen);
+                      GoRouter.of(context).push(AppRouter.genderScreen);
                     },
                     child: Text(
                       'Back',
@@ -66,7 +56,7 @@ class _GenderScreenState extends State<GenderScreen> {
                   Padding(
                     padding: EdgeInsets.symmetric(vertical: 20),
                     child: Text(
-                      'STEP 2/5',
+                      'STEP 3/5',
                       style: Styles.quickSand16.copyWith(
                         fontSize: 12,
                         fontWeight: FontWeight.w600,
@@ -75,37 +65,56 @@ class _GenderScreenState extends State<GenderScreen> {
                       textAlign: TextAlign.center,
                     ),
                   ),
-                   Padding(
+                  const Padding(
                     padding: EdgeInsets.symmetric(vertical: 20),
                     child: Text(
-                      'Choose Your Gender',
-                      style: Styles.quickSand25.copyWith(fontSize: 24),
+                      'What’s Your \nEmail Address',
+                      style: Styles.quickSand25,
                       textAlign: TextAlign.center,
                     ),
                   ),
-                  GenderWidget(
-                    onChange: (gender) {
-                      setState(() {
-                        selectedGender = gender;
-                      });
-                    },
-                  ),
                    Padding(
                     padding: EdgeInsets.symmetric(vertical: 20),
                     child: Text(
-                      'To give you a customized experience \nwe need to know your gender',
-                      style: Styles.rubik16.copyWith(color: Color(0xff4C5980)),
+                      'Email We Can Use To Reach You',
+                      style: Styles.quickSand16.copyWith(fontSize: 15, color: Color(0xff9F9F9F)),
                       textAlign: TextAlign.center,
                     ),
                   ),
                   const SizedBox(height: 20),
-                  SizedBox(
-                    height: 76,
+                  Center(
+                    child: Container(
+                      width: 300,
+                      height: 55,
+                      alignment: Alignment.center,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(10),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Color(0xffE5E4E2),
+                            blurRadius: 6,
+                            spreadRadius: 3,
+                          ),
+                        ],
+                      ),
+                      child: TextFormField(
+                        decoration: InputDecoration(
+                          border: InputBorder.none,
+                          hintText: "\u00A0Email",
+                          hintStyle: Styles.quickSand18.copyWith(
+                            fontWeight: FontWeight.w300,
+                            color: Colors.grey,
+                          ),
+                        ),
+                      ),
+                    ),
                   ),
+                  const SizedBox(height: 20),
                   CustomButton(
-                    buttonText: 'Continue',
+                    buttonText: 'Verify',
                     onPressed: () {
-                      GoRouter.of(context).push(AppRouter.emailScreen);
+                      GoRouter.of(context).push(AppRouter.genderScreen);
                     },
                     backgroundColor: buttonColor,
                     textColor: Colors.white,

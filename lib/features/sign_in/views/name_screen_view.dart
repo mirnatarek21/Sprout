@@ -39,7 +39,9 @@ class NameScreen extends StatelessWidget {
                     ),
                   ),
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      GoRouter.of(context).push(AppRouter.welcomeScreen);
+                    },
                     child: Text(
                       'Back',
                       style: Styles.quickSand16.copyWith(color: buttonColor),
