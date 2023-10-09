@@ -6,6 +6,7 @@ import '../../Features/onBoarding/presentation/views/onboarding_view.dart';
 import '../../features/sign_in/views/email_screen.dart';
 import '../../features/sign_in/views/gender_screen.dart';
 import '../../features/sign_in/views/name_screen_view.dart';
+import '../../features/sign_in/views/verify_email_screen.dart';
 
 abstract class AppRouter {
   static const languageScreen = '/languageScreen';
@@ -14,6 +15,7 @@ abstract class AppRouter {
   static const nameScreen = '/nameScreen';
   static const genderScreen = '/genderScreen';
   static const emailScreen = '/emailScreen';
+  static const verifyEmailScreen = '/verifyEmailScreen';
 
   static final router = GoRouter(
     routes: [
@@ -40,6 +42,10 @@ abstract class AppRouter {
       GoRoute(
         path: emailScreen,
         builder: (context, state) => const EmailScreen(),
+      ),
+      GoRoute(
+        path: verifyEmailScreen,
+        builder: (context, state) => const VerifyEmailScreen(),
       ),
     ],
   );

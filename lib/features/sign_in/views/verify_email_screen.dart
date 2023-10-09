@@ -1,7 +1,10 @@
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
+import 'package:pinput/pinput.dart';
+import 'package:well_fit/features/sign_in/views/widgets/code_widget.dart';
 
 import '../../../constants.dart';
 import '../../../core/utils/app_router.dart';
@@ -9,9 +12,8 @@ import '../../../core/utils/assets.dart';
 import '../../../core/utils/styles.dart';
 import '../../../core/utils/widgets/custom_button.dart';
 
-class EmailScreen extends StatelessWidget {
-  const EmailScreen({Key? key}) : super(key: key);
-
+class VerifyEmailScreen extends StatelessWidget{
+  const VerifyEmailScreen({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -56,7 +58,7 @@ class EmailScreen extends StatelessWidget {
                   Padding(
                     padding: EdgeInsets.symmetric(vertical: 20),
                     child: Text(
-                      'STEP 3/5',
+                      'STEP 4/5',
                       style: Styles.quickSand16.copyWith(
                         fontSize: 12,
                         fontWeight: FontWeight.w600,
@@ -65,58 +67,42 @@ class EmailScreen extends StatelessWidget {
                       textAlign: TextAlign.center,
                     ),
                   ),
+                  const SizedBox(height: 40),
                   const Text(
-                    'What’s Your \nEmail Address',
+                    'Verify Your Email',
                     style: Styles.quickSand25,
                     textAlign: TextAlign.center,
                   ),
                   const SizedBox(height: 10),
                   Text(
-                    'Email We Can Use To Reach You',
+                    'We’ll send the code on ui@vertex.com',
                     style: Styles.quickSand16.copyWith(fontSize: 15, color: Color(0xff9F9F9F)),
                     textAlign: TextAlign.center,
                   ),
-                  const SizedBox(height: 20),
-                  const SizedBox(height: 20),
-                  Center(
-                    child: Container(
-                      width: 300,
-                      height: 55,
-                      alignment: Alignment.center,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(10),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Color(0xffE5E4E2),
-                            blurRadius: 6,
-                            spreadRadius: 3,
-                          ),
-                        ],
-                      ),
-                      child: TextFormField(
-                        decoration: InputDecoration(
-                          border: InputBorder.none,
-                          hintText: "\u00A0Email",
-                          hintStyle: Styles.quickSand18.copyWith(
-                            fontWeight: FontWeight.w300,
-                            color: Colors.grey,
-                          ),
-                        ),
-                      ),
+                  const SizedBox(height: 45),
+                  CodeWidget(),
+                  // Pinput(
+                  //   length: 4,
+                  //   showCursor: true,
+                  //   onCompleted: (pin) => print(pin),
+                  // ),
+                  const SizedBox(height: 50),
+                  GestureDetector(
+                    onTap: () {},
+                    child: Text(
+                      'Send Me a New Code',
+                      style: Styles.quickSand16.copyWith(fontSize: 14, color: buttonColor, fontWeight: FontWeight.w600),
                     ),
                   ),
-                  const SizedBox(height: 20),
+                  const SizedBox(height: 45),
                   CustomButton(
-                    buttonText: 'Verify',
+                    buttonText: 'Continue',
                     onPressed: () {
-                      GoRouter.of(context).push(AppRouter.verifyEmailScreen);
                     },
                     backgroundColor: buttonColor,
                     textColor: Colors.white,
                     textStyle: Styles.rubik16.copyWith(fontWeight: FontWeight.w600),
                   ),
-                  const SizedBox(height: 20),
                 ],
               ),
             ),
