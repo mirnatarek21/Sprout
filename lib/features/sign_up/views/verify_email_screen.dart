@@ -4,7 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
 import 'package:pinput/pinput.dart';
-import 'package:well_fit/features/sign_in/views/widgets/code_widget.dart';
+import 'package:well_fit/features/sign_up/views/widgets/code_widget.dart';
 
 import '../../../constants.dart';
 import '../../../core/utils/app_router.dart';

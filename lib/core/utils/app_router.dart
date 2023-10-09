@@ -3,10 +3,10 @@ import 'package:well_fit/features/onBoarding/presentation/views/welcome_screen.d
 
 import '../../Features/onBoarding/presentation/views/language_screen_view.dart';
 import '../../Features/onBoarding/presentation/views/onboarding_view.dart';
-import '../../features/sign_in/views/email_screen.dart';
-import '../../features/sign_in/views/gender_screen.dart';
-import '../../features/sign_in/views/name_screen_view.dart';
-import '../../features/sign_in/views/verify_email_screen.dart';
+import '../../features/sign_up/views/email_screen.dart';
+import '../../features/sign_up/views/gender_screen.dart';
+import '../../features/sign_up/views/name_screen_view.dart';
+import '../../features/sign_up/views/verify_email_screen.dart';
 
 abstract class AppRouter {
   static const languageScreen = '/languageScreen';

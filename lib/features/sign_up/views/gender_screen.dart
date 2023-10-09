@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
-import 'package:well_fit/features/sign_in/views/widgets/gender_widget.dart';
+import 'package:well_fit/features/sign_up/views/widgets/gender_widget.dart';
 
 import '../../../constants.dart';
 import '../../../core/utils/app_router.dart';
