@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d1a106d-e04e-4ad0-87a6-da81f3413043" name="Changes" comment="">
-      <changelist_data name="Mirna-tarek" email="mirnatarek111@gmail.com" />
-    </list>
+    <list default="true" id="2d1a106d-e04e-4ad0-87a6-da81f3413043" name="Changes" comment="try push" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,10 +47,19 @@
       <option name="presentableId" value="Default" />
       <updated>1720118440868</updated>
     </task>
+    <task id="LOCAL؜-٠٠٠٠١" summary="try push">
+      <created>1720119711086</created>
+      <option name="number" value="٠٠٠٠١" />
+      <option name="presentableId" value="LOCAL؜-٠٠٠٠١" />
+      <option name="project" value="LOCAL؜" />
+      <updated>1720119711086</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init state" />
-    <option name="LAST_COMMIT_MESSAGE" value="init state" />
+    <MESSAGE value="try push" />
+    <option name="LAST_COMMIT_MESSAGE" value="try push" />
   </component>
 </project>
